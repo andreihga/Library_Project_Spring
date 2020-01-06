@@ -1,0 +1,21 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-configuration SYSTEM
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+
+<!--        we need first the jdbc driver-->
+        <property name = "hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+<!--        then the path to the schema-->
+        <property name = "hibernate.connection.url">jdbc:mysql://localhost/library_model_db</property>
+<!--        then the credentials for db-->
+        <property name = "hibernate.connection.username">root</property>
+
+        <property name = "hibernate.connection.password">parola</property>
+<!--then the version of the MySql dependency we used-->
+        <property name = "hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
+
+        <mapping class="sda.library.entity.Book"></mapping>
+
+    </session-factory>
+</hibernate-configuration>
